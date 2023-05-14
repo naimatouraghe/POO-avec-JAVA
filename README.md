@@ -6,14 +6,17 @@ Ce paradigme peut se resumer par `Tout est objet`.
 
 ## Les bases
 
-1. Objets
+**1. Objets**
+
 
 **Définition**
+
 Les objets sont un ensemble de méthodes et attribus stockés dans une variable.
 
 **Exemples**
 
-``
+
+```
 public class HelloWorld {
 
     public static void main(String[] args){
@@ -30,12 +33,12 @@ public class HelloWorld {
     }
 
 }
-``
+```
 
-Ici on peut distinguer 2 objets : System & currentDate.
+Ici on peut distinguer 2 objets : **System** et **currentDate**.
 
-``
-L'objets Voiture peut avoir 2 attribus
+```
+L'objets Voiture peut avoir deux attribus:
 
 - Nom
 - Marque
@@ -45,14 +48,16 @@ Et posséder deux méthodes :
 - démarrer()
 - avancer()
 
-`` 2. Les classes
+``` 
+**2. Les classes**
 
 Les classes sont des modèles d'objets. Elles servent à définir l'objet (méthodes et attribus) un peu comme un moule.
 
-``
+```
 class Voiture {
-String nom;
-String marque;
+
+    String nom;
+    String marque;
 
     public void démarrer(){
         ...
@@ -62,14 +67,16 @@ String marque;
     }
 
 }
-``
+```
 Cet objet a donc 2 attributs et 2 méthodes.
 
-3. Instances
-   à partir de notre modèle d'objet on peut facilement créer un objet de type Ferrari.
-   La Ferrari sera considérée ainsi comme une instance de la Classe Voiture
+**3. Instances**
 
-``
+À partir de notre modèle d'objet on peut facilement créer un objet de type Ferrari.
+
+La Ferrari sera considérée ainsi comme une instance de la Classe Voiture
+
+```
 
 - F488
 - Ferrari
@@ -77,12 +84,12 @@ Cet objet a donc 2 attributs et 2 méthodes.
 - démarrer()
 - avancer()
 
-``
+```
 
 Afin de pouvoir instancier des objets à partir du modèle d'objet(ou Classe) on va se servir du `constructeur`.
 Le constructeur en bref est une méthode avec le superpouvoir de création d'instrances.
 
-``
+```
 class Voiture {
 String nom;
 String marque;
@@ -99,23 +106,23 @@ String marque;
     }
 
 }
-``
+```
 
 Pour instancier on aura ensuite à déclarer une variable maFerrari de type Voiture(nom de la Classe) qui contiendra la création (new) de notre Voiture(Classe) en lui passant en paramètres son nom (F488) et son modèle (Ferrari).
 Suite à la création de l'instance on pourra alors se servir des méthodes déclaré dans la Classe Voiture.
 
-``
+```
 Voiture maFerrari = new Voiture("F488","Ferrari");
 
 maFerrari.demarrer()
 maFerrari.avancer()
-``
+```
 
-4. L'héritage
+**4. L'héritage**
 
 Dans l'exemple suivant on va vouloir créer deux modèles d'objets afin de pouvoir instancier des voitures et des motos.
 
-``
+```
 class Voiture {
 String nom;
 String marque;
@@ -158,11 +165,11 @@ String marque;
 
 }
 
-``
+```
 On peut noter que dans cette architecture de code nous avons le 80% du code qui se repète( meme attribus, constructeur et des méthodes similaires ).
 Afin de ne pas se répéter nous allons utiliser le concept d'héritage et refactorer le code ainsi:
 
-``
+```
 class Vehicule {
 String nom;
 String marque;
@@ -179,12 +186,12 @@ String marque;
     }
 
 }
-``
+```
 
 En créant une `Classe mère` Vehicule on va pouvoir rassembler le 80% du code qui aurait été similaire en créant 2 classes (moto et voiture).
 De cette manière on va pouvoir créer 2 `Classes filles` qui extendent de la `classe Mère`.
 
-``
+```
 class Voiture extends Vehicule {
 
 ...
@@ -205,26 +212,26 @@ class Moto extends Vehicule {
 
 }
 
-``
+```
 
 **5. InstanceOf**
 
-Instance : objet crée à partir d'une classe
+**Instance** : objet crée à partir d'une classe
 
-``
+```
 Voiture maVoiture = new Voiture("F488", "Ferrari");
 
 class Voiture extends Vehicule {
 ...
-public void activerAirBag() {
-...
+    public void activerAirBag() {
+    ...
+    }
 }
-}
-``
+```
 
-if(maVoiture instanceof Voiture) => true
-if(maVoiture instanceof Vehicule) => true
-if(maVoiture instanceof Object) => true
+- if(maVoiture instanceof Voiture) => true
+- if(maVoiture instanceof Vehicule) => true
+- if(maVoiture instanceof Object) => true
 
-if(maVoiture instanceof Moto) => false
-if(maVoiture instanceof Integer) => false
+- if(maVoiture instanceof Moto) => false
+- if(maVoiture instanceof Integer) => false
