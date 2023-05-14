@@ -235,3 +235,21 @@ class Voiture extends Vehicule {
 
 - if(maVoiture instanceof Moto) => false
 - if(maVoiture instanceof Integer) => false
+
+
+
+## Approfondissements 
+
+**1. Variables et Références**
+
+**2. Classes abstraites**
+
+**3. Interface**
+
+**4. Méthode**
+
+**5. Surcharge et polymorphisme** 
+
+**6. Encapsulation, Visibilité, Getters et Setters**
+
+**7. Projet Lombok(en finir avec les Getters et Setters?)** 
