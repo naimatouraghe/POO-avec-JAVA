@@ -207,7 +207,7 @@ class Moto extends Vehicule {
 
 ``
 
-5. InstanceOf
+**5. InstanceOf**
 
 Instance : objet crée à partir d'une classe
 
@@ -225,5 +225,6 @@ public void activerAirBag() {
 if(maVoiture instanceof Voiture) => true
 if(maVoiture instanceof Vehicule) => true
 if(maVoiture instanceof Object) => true
+
 if(maVoiture instanceof Moto) => false
 if(maVoiture instanceof Integer) => false
