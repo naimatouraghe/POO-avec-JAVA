@@ -236,6 +236,9 @@ class Voiture extends Vehicule {
 - if(maVoiture instanceof Moto) => false
 - if(maVoiture instanceof Integer) => false
 
+maVoiture est à la fois une instance de Voiture, Vehicule et Object. 
+Cela s'explique en partie par la notion d'héritage qui veut que la classe Voiture extends de Vehicule et donc de manière indirecte ou directe Voiture est une instance des ces deux. 
+Cependant l'héritage se fait de mère en fille et non pas entre soeurs donc maVoiture n'est pas une instance de Moto ni d'un autre type d'objet (String, Integer, Boolean, ...)
 
 
 ## Approfondissements 
