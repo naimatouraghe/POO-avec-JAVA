@@ -243,9 +243,71 @@ Cependant l'héritage se fait de mère en fille et non pas entre soeurs donc maV
 
 ## Approfondissements 
 
-**1. Variables et Références**
+**1. Variables et Références***
+Une variable est un élément pointant vers un objet. 
+
+Avant de comprendre la notion de **réference** on doit revenir sur la notion de mémoire vive. 
+
+Mémoire vive => Mémoire RAM (Random Access Memory) 
+
+Nous pouvons la rapprésenter par un ensemble de boites qui ont une adresse spécifique. Donc chaque boite aura son adresse. 
+
+![Capture d’écran du 2023-05-15 12-31-57](https://github.com/naimatouraghe/POO-avec-JAVA/assets/80955884/683292cc-534a-474f-b9f8-087d2987e54d)
+
+``` 
+int monAge = 26; 
+String maPhrase = "Hello World"
+Voiture maFerrari = new Voiture("F488", "Ferrari"); 
+```
+
+Lorsque on va instancier (affecter une valeur à une variable) une nouvelle variable cela sera rangé dans une des boites de notre mémoire vive. 
+
+De ce fait quand on appellera la variable en question, cette dernière nous servira seulement pour aller la rechercher à l'adresse qui lui aura été affectée. 
+
+![Capture d’écran du 2023-05-15 12-44-16](https://github.com/naimatouraghe/POO-avec-JAVA/assets/80955884/d6bc35fb-f135-473a-a9e4-80c2e3125981)
+
+Notre variable ```maFerrari``` est ainsi un pointeur qui nous sert à aller chercher l'information au bon endroit. 
+Chaque case mémoire peut contenir un seul objet qui est considéré donc unique. 
+Concrétement ça veut dire que si on crée deux objets idéntiques, informatiquement parlant ce sont deux réferences bien distinctes avec deux adresses diférente.
+
+```
+Voiture maFerrari = new Voiture("F488", "Ferrari");
+Voiture maFerrari2 = new Voiture("F488", "Ferrari");
+```
+
+
+Cependant si on crée une deuxième variable qui pointe vers la réference maFerrari elles pointeront toutes les deux sur le meme objet.
+
+```
+Voiture maFerrari = new Voiture("F488", "Ferrari");
+Voiture maFerrari2 = maFerrari
+
+```
+De ce fait si on décide de changer le nom de la première voiture, ce changement se repercutera sur la deuxième variable ```maFerrari2```car nos deux variables pointent vers la meme réference d'objet.
+
 
 **2. Classes abstraites**
+
+Une Classe abstraite est une Classe avec au moins une méthode abstraite. 
+
+Une méthode ressemble globalement à celle ci: 
+```
+public void demarrer(){
+...<code>...
+}
+```
+Une méthode abstraite ressemble plutot à celle ci: 
+```
+public abstract void demarrer(); 
+```
+
+Le corps de fonction a donc totalement disparu et cette méthode abstraite n'a donc aucun comportement. 
+Le fait que cette méthode soit abstraite et que elle n'ait aucun comportement implique que la Classe dans laquelle elle est déclarée est abstraite également. 
+Par conséquant on ne peut pas instancier un objet à partir d'une Classe abstraite. 
+Pour pouvoir conturner cette contrainte, on passera le corps de fonction dans les Classes filles. 
+
+![Capture d’écran du 2023-05-15 13-15-40](https://github.com/naimatouraghe/POO-avec-JAVA/assets/80955884/dfdef7fa-1ce1-4529-afd6-8c385202bd0f)
+
 
 **3. Interface**
 
