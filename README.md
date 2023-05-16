@@ -327,3 +327,31 @@ Pour pouvoir conturner cette contrainte, on passera le corps de fonction dans le
 
 **11.Exos**
 
+
+**8. Les exceptions et comment les gérer**
+
+[Exception handling interview questions](https://www.interviewbit.com/exception-handling-interview-questions/)
+
+**a. Définition de l'exception en Java**
+
+**b. Qu’est-ce que la gestion des exceptions en Java et quels sont les avantages de la gestion des exceptions?**
+![Exception Handling](https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/928/original/exception_handling_in_Java.png?1680152106)
+
+
+**c. Comment les exceptions sont-elles traitées dans Java?**
+
+**d. Qu’est-ce que la propagation d’exception en Java?**
+![Exception Propagation](https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/929/original/exception_propagation_in_Java.png?1680152385)
+
+**e. Quelles sont les méthodes importantes définies dans la classe d’exception de Java ?**
+
+**f. Que sont les exceptions d’exécution en Java?**
+
+**g. Quelle est la différence entre les mots clés throw et throws en Java?**
+
+**h.Comment gérez-vous les exceptions vérifiées?**
+
+
+
+
+
