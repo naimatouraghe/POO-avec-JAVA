@@ -318,8 +318,12 @@ Pour pouvoir conturner cette contrainte, on passera le corps de fonction dans le
 **6. Encapsulation, Visibilité, Getters et Setters**
 
 **7. Projet Lombok(en finir avec les Getters et Setters?)** 
+
 **8. Collections (List / Set)**
+
 **9. Découverte interface STREAMS (AnyMatch / Filter / Collectors)**
+
 **10. Map(HashMap / LinkedHasMap)**
+
 **11.Exos**
 
